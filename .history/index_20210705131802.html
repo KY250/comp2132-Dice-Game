@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/rules.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>My First Dice Game</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 style="text-align: center; font-family: 'Tourney', cursive;">Dice Game</h1>
+        </header>
+        <!-- Gameboard Start -->
+        <div class="gameBoard">
+
+            <!-- Player One Start -->
+            <div style="border: 5px solid black; background-color: floralwhite;" class="playerOne" id="playerOne">
+                <h1><span>Player 1</span></h1>
+                <div class="dice" id="dice">
+                    <img src="images/dice1.png" id="dice1" alt="single die">
+                    <img src="images/dice6.png" id="dice2" alt="single die">
+                </div>
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Score this Round</h3>
+                        <p class="score" id="playerOneRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total Score</h3>
+                        <p class="score" id="playerOneTotal">0</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Player One -->
+
+            <!-- Player 2 Start -->
+            <div style="border: 5px solid black; background-color: floralwhite;" class="playerTwo" id="playerTwo">
+                <h1><span>Player 2</span></h1>
+                <div class="dice" id="dice">
+                    <img src="images/dice6.png" id="dice3" alt="single die">
+                    <img src="images/dice1.png" id="dice4" alt="single die">
+                </div>
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Score this Round</h3>
+                        <p class="score" id="playerTwoRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total Score</h3>
+                        <p class="score" id="playerTwoTotal">0</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Player 2 -->
+
+            <!-- Button container -->
+            <div class="buttonHolder">
+                <button class="btn" id="newGame">
+                    New Game
+                </button>
+                <button class="btn" id="rulesButton">
+                    How to Play?
+                </button>
+
+                <button class="btn" id="buttonRoll">
+                    </i>Roll Dice
+                </button>
+                <p>Roll Number: <span id="rollNumber">0</span></p>
+                <!-- End Buttons -->
+            </div>
+            <!-- Game Board End-->
+
+            <!-- Pop Up -->
+            <div class="popUp" id="popUp" hidden>
+                <div class="popUpContainer" style="color:white;">
+                    <h1 id="winner"></h1>
+                    <h3>Player 1 Score: <span id="playerScore"></span></h3>
+                    <h3>Player 2 Score: <span id="computerScore"></span></h3>
+                    <button class="btn" id="playAgain">Play Again</button>
+                </div>
+            </div>
+            <!-- End Results -->
+
+            <!-- Rules Start -->
+            <div class="rules" id="rules">
+                <div class="rulesContainer" style="color:white;">
+                    <button class="btn" id="rulesClose">Close</button>
+                    <h2>Rules of Play</h2>
+                    <p>Player with highest score after 3 rounds is the winner.</p>
+                    <h2>How to Score</h2>
+                    <p>If a player rolls a 1 on either die, round score is 0.</p>
+                    <p>If a player rolls matching die values, round score is double the total of both dice.</p>
+                    <p>Round score is the total of both dice.</p>
+                </div>
+            </div>
+            <!-- Rules End -->
+
+<script src="javascripts/javascript.js" derfer="derfer"></script>
+</body>
+</html>
