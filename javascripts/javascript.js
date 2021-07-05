@@ -1,10 +1,10 @@
-var rollCount = 0;
-var playerOneTotal = 0;
-var playerTwoTotal = 0;
-var playerOneRoundTotal = 0;
-var playerTwoRoundTotal = 0;
+let rollCount = 0;
+let playerOneTotal = 0;
+let playerTwoTotal = 0;
+let playerOneRoundTotal = 0;
+let playerTwoRoundTotal = 0;
 
-var dice = [];
+let dice = [];
 for ( i = 0; i < 6; i++) {
     dice[i] = {
         value: i + 1,
@@ -14,7 +14,7 @@ for ( i = 0; i < 6; i++) {
 
 function rollDice() {
 
-    var diceRoll = [];
+    let diceRoll = [];
     for ( i = 1; i <= 4; i++ ) {
         diceRoll[i] = {
             img: dice[rollDie()]
@@ -28,7 +28,7 @@ function rollDice() {
 }
 
 function rollDie() {
-    var roll = Math.floor(Math.random() * 6);
+    let roll = Math.floor(Math.random() * 6);
     return roll;
 }
 
